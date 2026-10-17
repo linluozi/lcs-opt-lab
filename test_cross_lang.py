@@ -49,8 +49,12 @@ def run_java(x: str, y: str) -> int:
                          input=payload, capture_output=True, text=True,
                          encoding="utf-8")
     if out.returncode != 0:
-        raise RuntimeError(f"Java 失败: {out.stdout} {out.stderr}")
+        raise RuntimeError(
+            f"Java 失败 (exit={out.returncode}) for x={x!r} y={y!r}\n"
+            f"  stdout={out.stdout!r}\n  stderr={out.stderr!r}")
     m = re.search(r"len=(\d+)", out.stdout)
+    if not m:
+        raise RuntimeError(f"Java 输出无法解析: {out.stdout!r}")
     return int(m.group(1))
 
 
@@ -60,11 +64,27 @@ def main() -> int:
     args = ap.parse_args()
 
     if not args.skip_build:
-        subprocess.run(["sh", os.path.join(HERE, "c", "build.sh")], check=True,
-                       cwd=os.path.join(HERE, "c"), capture_output=True)
+        # C：build.sh 自己会在 gcc/clang/MSVC 之间选一个
+        r = subprocess.run(["sh", os.path.join(HERE, "c", "build.sh")],
+                           cwd=os.path.join(HERE, "c"),
+                           capture_output=True, text=True)
+        if r.returncode != 0:
+            print(f"C 编译失败：\n{r.stdout}\n{r.stderr}")
+            return 1
+        # Java：.class 被 .gitignore 排除，克隆下来的仓库里没有编译产物，
+        # 所以这里必须自己编译一次 —— 否则 run_java() 会抛一个只有 "None" 的
+        # RuntimeError（javac 没跑过，java 报 "Could not find or load main class"）。
+        r = subprocess.run(["javac", "-d", ".", "Lcs.java"],
+                           cwd=JAVA_DIR, capture_output=True, text=True)
+        if r.returncode != 0:
+            print(f"Java 编译失败（需要 JDK）：\n{r.stdout}\n{r.stderr}")
+            return 1
 
     if not os.path.exists(C_EXE):
         print(f"缺少 {C_EXE}，先跑 sh c/build.sh")
+        return 1
+    if not os.path.exists(os.path.join(JAVA_DIR, "Lcs.class")):
+        print(f"缺少 {JAVA_DIR}/Lcs.class，先跑 javac -d . Lcs.java")
         return 1
 
     rng = random.Random(20261017)

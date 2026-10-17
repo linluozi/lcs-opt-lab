@@ -59,12 +59,35 @@ def _py(arm: str, n: int, reps: int) -> float:
     raise RuntimeError(out.stderr)
 
 
+def build() -> None:
+    """
+    编译 C 与 Java。
+
+    .class / .exe 都在 .gitignore 里，所以从 GitHub 克隆下来的仓库没有编译产物 ——
+    不先编译就直接跑，会得到一句 `RuntimeError: C 运行失败 ... ''` 这种没法定位的报错。
+    """
+    r = subprocess.run(["sh", os.path.join(HERE, "c", "build.sh")],
+                       cwd=os.path.join(HERE, "c"), capture_output=True, text=True)
+    if r.returncode != 0:
+        raise SystemExit(f"C 编译失败：\n{r.stdout}\n{r.stderr}")
+    print(f"  {r.stdout.strip()}")
+    r = subprocess.run(["javac", "-d", ".", "Lcs.java"],
+                       cwd=JAVA_DIR, capture_output=True, text=True)
+    if r.returncode != 0:
+        raise SystemExit(f"Java 编译失败（需要 JDK）：\n{r.stdout}\n{r.stderr}")
+    print("  javac ok")
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--runs", type=int, default=5)
     ap.add_argument("--reps", type=int, default=3)
     ap.add_argument("--sizes", type=int, nargs="+", default=[1000, 5000, 20000])
+    ap.add_argument("--skip-build", action="store_true")
     args = ap.parse_args()
+
+    if not args.skip_build:
+        build()
 
     print(f"Python {platform.python_version()} / {platform.machine()}")
     print(f"每配置 {args.runs} 次独立进程，每次内部 best-of-{args.reps}\n")
