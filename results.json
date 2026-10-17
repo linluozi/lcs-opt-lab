@@ -1,0 +1,558 @@
+{
+  "python": "3.13.14",
+  "machine": "AMD64",
+  "system": "Windows",
+  "reps": 5,
+  "time": [
+    {
+      "arm": "a0_baseline",
+      "n": 500,
+      "len": 330,
+      "ms": 35.94210000028397,
+      "med_ms": 48.29130000052828,
+      "reps": 5,
+      "inner": 1,
+      "spread": 1.3736120037367137,
+      "unstable": true,
+      "kind": "len"
+    },
+    {
+      "arm": "a1a_syntax",
+      "n": 500,
+      "len": 330,
+      "ms": 24.33790000031877,
+      "med_ms": 24.76699999988341,
+      "reps": 5,
+      "inner": 1,
+      "spread": 1.1262763015824515,
+      "unstable": false,
+      "kind": "len"
+    },
+    {
+      "arm": "a1b_two_branch",
+      "n": 500,
+      "len": 330,
+      "ms": 17.077900000003865,
+      "med_ms": 17.497200000434532,
+      "reps": 5,
+      "inner": 1,
+      "spread": 1.0383829393539799,
+      "unstable": false,
+      "kind": "len"
+    },
+    {
+      "arm": "a1l_rolling",
+      "n": 500,
+      "len": 330,
+      "ms": 14.81320000038977,
+      "med_ms": 16.476199999488017,
+      "reps": 5,
+      "inner": 1,
+      "spread": 1.1399765074237451,
+      "unstable": false,
+      "kind": "len"
+    },
+    {
+      "arm": "a3_bitset_len",
+      "n": 500,
+      "len": 330,
+      "ms": 0.12145405405651734,
+      "med_ms": 0.13443783784070448,
+      "reps": 5,
+      "inner": 37,
+      "spread": 1.357826338612099,
+      "unstable": true,
+      "kind": "len"
+    },
+    {
+      "arm": "a2_list_backtrack",
+      "n": 500,
+      "len": 330,
+      "ms": 17.586699999810662,
+      "med_ms": 17.701199999464734,
+      "reps": 5,
+      "inner": 1,
+      "spread": 1.1383602381945643,
+      "unstable": false,
+      "kind": "seq"
+    },
+    {
+      "arm": "a4_bitset_seq",
+      "n": 500,
+      "len": 330,
+      "ms": 0.3555583333915517,
+      "med_ms": 0.3641499999957887,
+      "reps": 5,
+      "inner": 12,
+      "spread": 1.0358590946211887,
+      "unstable": false,
+      "kind": "seq"
+    },
+    {
+      "arm": "a5_hirschberg",
+      "n": 500,
+      "len": 330,
+      "ms": 27.830600000015693,
+      "med_ms": 29.25790000062989,
+      "reps": 5,
+      "inner": 1,
+      "spread": 1.0867498365128159,
+      "unstable": false,
+      "kind": "seq"
+    },
+    {
+      "arm": "a0_baseline",
+      "n": 1000,
+      "len": 649,
+      "ms": 154.24290000009933,
+      "med_ms": 172.83790000055888,
+      "reps": 5,
+      "inner": 1,
+      "spread": 1.1302458654485863,
+      "unstable": false,
+      "kind": "len"
+    },
+    {
+      "arm": "a1a_syntax",
+      "n": 1000,
+      "len": 649,
+      "ms": 105.48410000046715,
+      "med_ms": 109.37009999997827,
+      "reps": 5,
+      "inner": 1,
+      "spread": 1.0749326201742453,
+      "unstable": false,
+      "kind": "len"
+    },
+    {
+      "arm": "a1b_two_branch",
+      "n": 1000,
+      "len": 649,
+      "ms": 75.51109999985783,
+      "med_ms": 79.43749999958527,
+      "reps": 5,
+      "inner": 1,
+      "spread": 1.106806813830747,
+      "unstable": false,
+      "kind": "len"
+    },
+    {
+      "arm": "a1l_rolling",
+      "n": 1000,
+      "len": 649,
+      "ms": 62.967000000753615,
+      "med_ms": 63.21089999983087,
+      "reps": 5,
+      "inner": 1,
+      "spread": 1.1278256864454228,
+      "unstable": false,
+      "kind": "len"
+    },
+    {
+      "arm": "a3_bitset_len",
+      "n": 1000,
+      "len": 649,
+      "ms": 0.2812294117521721,
+      "med_ms": 0.3172941176350886,
+      "reps": 5,
+      "inner": 17,
+      "spread": 1.436256771747013,
+      "unstable": true,
+      "kind": "len"
+    },
+    {
+      "arm": "a2_list_backtrack",
+      "n": 1000,
+      "len": 649,
+      "ms": 76.99660000071162,
+      "med_ms": 77.95290000012756,
+      "reps": 5,
+      "inner": 1,
+      "spread": 1.0610767228565887,
+      "unstable": false,
+      "kind": "seq"
+    },
+    {
+      "arm": "a4_bitset_seq",
+      "n": 1000,
+      "len": 649,
+      "ms": 0.8038833332951375,
+      "med_ms": 0.8206999999250305,
+      "reps": 5,
+      "inner": 6,
+      "spread": 1.036012688458204,
+      "unstable": false,
+      "kind": "seq"
+    },
+    {
+      "arm": "a5_hirschberg",
+      "n": 1000,
+      "len": 649,
+      "ms": 115.06989999998041,
+      "med_ms": 116.15139999958046,
+      "reps": 5,
+      "inner": 1,
+      "spread": 1.0475580494985843,
+      "unstable": false,
+      "kind": "seq"
+    },
+    {
+      "arm": "a0_baseline",
+      "n": 2000,
+      "len": 1308,
+      "ms": 683.7022999998226,
+      "med_ms": 745.9842000007484,
+      "reps": 5,
+      "inner": 1,
+      "spread": 1.1359100298475533,
+      "unstable": false,
+      "kind": "len"
+    },
+    {
+      "arm": "a1a_syntax",
+      "n": 2000,
+      "len": 1308,
+      "ms": 468.30320000026404,
+      "med_ms": 487.90829999961716,
+      "reps": 5,
+      "inner": 1,
+      "spread": 1.1328180119200146,
+      "unstable": false,
+      "kind": "len"
+    },
+    {
+      "arm": "a1b_two_branch",
+      "n": 2000,
+      "len": 1308,
+      "ms": 325.8869000001141,
+      "med_ms": 328.50630000029923,
+      "reps": 5,
+      "inner": 1,
+      "spread": 1.0665169419197864,
+      "unstable": false,
+      "kind": "len"
+    },
+    {
+      "arm": "a1l_rolling",
+      "n": 2000,
+      "len": 1308,
+      "ms": 269.07440000013594,
+      "med_ms": 299.0606999992451,
+      "reps": 5,
+      "inner": 1,
+      "spread": 1.2771475101287644,
+      "unstable": true,
+      "kind": "len"
+    },
+    {
+      "arm": "a3_bitset_len",
+      "n": 2000,
+      "len": 1308,
+      "ms": 0.9764399999767193,
+      "med_ms": 1.0896399999182904,
+      "reps": 5,
+      "inner": 5,
+      "spread": 1.3893121955334011,
+      "unstable": true,
+      "kind": "len"
+    },
+    {
+      "arm": "a2_list_backtrack",
+      "n": 2000,
+      "len": 1308,
+      "ms": 371.7526000000362,
+      "med_ms": 446.3359000001219,
+      "reps": 5,
+      "inner": 1,
+      "spread": 1.6047963080813568,
+      "unstable": true,
+      "kind": "seq"
+    },
+    {
+      "arm": "a4_bitset_seq",
+      "n": 2000,
+      "len": 1308,
+      "ms": 3.385800000614836,
+      "med_ms": 3.659299999526411,
+      "reps": 5,
+      "inner": 1,
+      "spread": 1.1531691177407402,
+      "unstable": false,
+      "kind": "seq"
+    },
+    {
+      "arm": "a5_hirschberg",
+      "n": 2000,
+      "len": 1308,
+      "ms": 500.7466999995813,
+      "med_ms": 504.64929999998276,
+      "reps": 5,
+      "inner": 1,
+      "spread": 1.4872896815908194,
+      "unstable": true,
+      "kind": "seq"
+    }
+  ],
+  "space": [
+    {
+      "arm": "a0_baseline",
+      "n": 500,
+      "peak_mb": 2.0125551223754883,
+      "reps": 5
+    },
+    {
+      "arm": "a1a_syntax",
+      "n": 500,
+      "peak_mb": 2.0125551223754883,
+      "reps": 5
+    },
+    {
+      "arm": "a1b_two_branch",
+      "n": 500,
+      "peak_mb": 2.0944643020629883,
+      "reps": 5
+    },
+    {
+      "arm": "a1l_rolling",
+      "n": 500,
+      "peak_mb": 0.0120391845703125,
+      "reps": 5
+    },
+    {
+      "arm": "a3_bitset_len",
+      "n": 500,
+      "peak_mb": 0.001567840576171875,
+      "reps": 5
+    },
+    {
+      "arm": "a2_list_backtrack",
+      "n": 500,
+      "peak_mb": 2.0994138717651367,
+      "reps": 5
+    },
+    {
+      "arm": "a4_bitset_seq",
+      "n": 500,
+      "peak_mb": 0.05479717254638672,
+      "reps": 5
+    },
+    {
+      "arm": "a5_hirschberg",
+      "n": 500,
+      "peak_mb": 0.024222373962402344,
+      "reps": 5
+    },
+    {
+      "arm": "a0_baseline",
+      "n": 1000,
+      "peak_mb": 9.06385326385498,
+      "reps": 5
+    },
+    {
+      "arm": "a1a_syntax",
+      "n": 1000,
+      "peak_mb": 9.06385326385498,
+      "reps": 5
+    },
+    {
+      "arm": "a1b_two_branch",
+      "n": 1000,
+      "peak_mb": 11.46753978729248,
+      "reps": 5
+    },
+    {
+      "arm": "a1l_rolling",
+      "n": 1000,
+      "peak_mb": 0.0357208251953125,
+      "reps": 5
+    },
+    {
+      "arm": "a3_bitset_len",
+      "n": 1000,
+      "peak_mb": 0.00214385986328125,
+      "reps": 5
+    },
+    {
+      "arm": "a2_list_backtrack",
+      "n": 1000,
+      "peak_mb": 11.477067947387695,
+      "reps": 5
+    },
+    {
+      "arm": "a4_bitset_seq",
+      "n": 1000,
+      "peak_mb": 0.17351722717285156,
+      "reps": 5
+    },
+    {
+      "arm": "a5_hirschberg",
+      "n": 1000,
+      "peak_mb": 0.058577537536621094,
+      "reps": 5
+    },
+    {
+      "arm": "a0_baseline",
+      "n": 2000,
+      "peak_mb": 37.986741065979004,
+      "reps": 5
+    },
+    {
+      "arm": "a1a_syntax",
+      "n": 2000,
+      "peak_mb": 37.986741065979004,
+      "reps": 5
+    },
+    {
+      "arm": "a1b_two_branch",
+      "n": 2000,
+      "peak_mb": 53.40315341949463,
+      "reps": 5
+    },
+    {
+      "arm": "a1l_rolling",
+      "n": 2000,
+      "peak_mb": 0.0797271728515625,
+      "reps": 5
+    },
+    {
+      "arm": "a3_bitset_len",
+      "n": 2000,
+      "peak_mb": 0.00337982177734375,
+      "reps": 5
+    },
+    {
+      "arm": "a2_list_backtrack",
+      "n": 2000,
+      "peak_mb": 53.42265796661377,
+      "reps": 5
+    },
+    {
+      "arm": "a4_bitset_seq",
+      "n": 2000,
+      "peak_mb": 0.5968523025512695,
+      "reps": 5
+    },
+    {
+      "arm": "a5_hirschberg",
+      "n": 2000,
+      "peak_mb": 0.14517593383789062,
+      "reps": 5
+    }
+  ],
+  "scaling": {
+    "a0_baseline": {
+      "points": [
+        [
+          250,
+          8.118099999592232
+        ],
+        [
+          500,
+          41.184599999724014
+        ],
+        [
+          1000,
+          159.737099999802
+        ],
+        [
+          2000,
+          689.1973000001599
+        ]
+      ],
+      "slope": 2.1178415929346035,
+      "segments": [
+        {
+          "from": 250,
+          "to": 500,
+          "slope": 2.342890960269017
+        },
+        {
+          "from": 500,
+          "to": 1000,
+          "slope": 1.9555225452431302
+        },
+        {
+          "from": 1000,
+          "to": 2000,
+          "slope": 2.109217622522154
+        }
+      ]
+    },
+    "a1l_rolling": {
+      "points": [
+        [
+          250,
+          3.351000000293425
+        ],
+        [
+          500,
+          14.063999999962107
+        ],
+        [
+          1000,
+          61.692199999924924
+        ],
+        [
+          2000,
+          260.686299999179
+        ]
+      ],
+      "slope": 2.0977818926918004,
+      "segments": [
+        {
+          "from": 250,
+          "to": 500,
+          "slope": 2.0693433838087185
+        },
+        {
+          "from": 500,
+          "to": 1000,
+          "slope": 2.1330811194121733
+        },
+        {
+          "from": 1000,
+          "to": 2000,
+          "slope": 2.0791547659477185
+        }
+      ]
+    },
+    "a3_bitset_len": {
+      "points": [
+        [
+          250,
+          0.05962321428601821
+        ],
+        [
+          500,
+          0.11993888890376386
+        ],
+        [
+          1000,
+          0.2766294117677984
+        ],
+        [
+          2000,
+          0.6497142856980125
+        ]
+      ],
+      "slope": 1.1543233148168108,
+      "segments": [
+        {
+          "from": 250,
+          "to": 500,
+          "slope": 1.0083534548709845
+        },
+        {
+          "from": 500,
+          "to": 1000,
+          "slope": 1.205655041674158
+        },
+        {
+          "from": 1000,
+          "to": 2000,
+          "slope": 1.2318508722861736
+        }
+      ]
+    }
+  }
+}

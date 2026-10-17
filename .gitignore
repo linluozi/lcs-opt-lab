@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# C
+*.obj
+*.exe
+c/lcs_c
+
+# Java
+*.class
+
+# 探针目录
+_probe/

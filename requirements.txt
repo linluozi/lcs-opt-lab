@@ -1,0 +1,6 @@
+# 运行测试和基准**不需要**任何第三方库 —— 只用标准库。
+# 只有 make_report.py（生成图表）需要 matplotlib。
+#
+# 安装（本机 pypi 清华源 SSL 有问题，用阿里云）：
+#   pip install -i https://mirrors.aliyun.com/pypi/simple/ -r requirements.txt
+matplotlib>=3.7
